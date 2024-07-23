@@ -2,12 +2,14 @@ package org.iase24.com.entity;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Set;
 
 @Entity
 @Table(name = "project")
 @NoArgsConstructor
+@Slf4j
 public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

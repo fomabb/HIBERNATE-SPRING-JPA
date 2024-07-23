@@ -1,18 +1,10 @@
 package org.iase24.com.repository;
 
 import org.iase24.com.entity.Address;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+@Repository
+public interface AddressRepository extends JpaRepository<Address, Long> {
 
-public interface AddressRepository {
-
-    void add(Address address);
-
-    List<Address> getAll();
-
-    Address getById(Long id);
-
-    void update(Address address);
-
-    void remove(Address address);
 }

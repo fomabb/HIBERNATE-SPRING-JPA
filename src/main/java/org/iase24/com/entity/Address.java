@@ -2,10 +2,12 @@ package org.iase24.com.entity;
 
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Entity
 @Table(name = "address")
 @NoArgsConstructor
+@Slf4j
 public class Address {
 
     @Id
