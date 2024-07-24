@@ -15,10 +15,12 @@
     <jpa:repositories base-package="org.iase24.com.repository" />
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/test_sql_db" />
-        <property name="username" value="root" />
-        <property name="password" value="5203251" />
+<!--        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />-->
+        <property name="driverClassName" value="org.postgresql.Driver" />
+<!--        <property name="url" value="jdbc:mysql://localhost:3306/test_sql_db" />-->
+        <property name="url" value="jdbc:postgresql://localhost:5432/postgres" />
+        <property name="username" value="postgres" />
+        <property name="password" value="postgres" />
     </bean>
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
