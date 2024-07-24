@@ -51,12 +51,12 @@ public class AppConfig {
         return factory;
     }
 
-//    @Bean
-//    public PlatformTransactionManager transactionManager(EntityManagerFactory factory) {
-//        JpaTransactionManager transactionManager = new JpaTransactionManager();
-//        transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
-//        return transactionManager;
-//    }
+    @Bean
+    public PlatformTransactionManager transactionManager(EntityManagerFactory factory) {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory((jakarta.persistence.EntityManagerFactory) factory);
+        return transactionManager;
+    }
 
     @Bean
     PersistenceExceptionTranslationPostProcessor exceptionTranslation() {
