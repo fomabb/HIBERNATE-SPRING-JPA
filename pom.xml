@@ -5,19 +5,83 @@
     <artifactId>hibernate</artifactId>
     <packaging>war</packaging>
     <properties>
-        <maven.compiler.source>19</maven.compiler.source>
-        <maven.compiler.target>19</maven.compiler.target>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+
+        <javax.servlet>4.0.1</javax.servlet>
+        <spring.jpa>3.3.2</spring.jpa>
+        <spring.version>6.0.14</spring.version>
+        <jakson.version>2.17.2</jakson.version>
+
     </properties>
     <version>1.0-SNAPSHOT</version>
     <name>hibernate Maven Webapp</name>
     <url>http://maven.apache.org</url>
+
     <dependencies>
+<!--        <dependency>-->
+<!--            <groupId>javax.servlet</groupId>-->
+<!--            <artifactId>javax.servlet-api</artifactId>-->
+<!--            <version>${javax.servlet}</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
+                <dependency>
+                    <groupId>jakarta.servlet</groupId>
+                    <artifactId>jakarta.servlet-api</artifactId>
+                    <version>6.1.0</version>
+                    <scope>provided</scope>
+                </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>3.3.2</version>
+            <version>${spring.jpa}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jakson.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>5.1.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jakson.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -30,13 +94,6 @@
             <artifactId>slf4j-api</artifactId>
             <version>2.0.12</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>6.1.11</version>
-        </dependency>
-
 
         <dependency>
             <groupId>junit</groupId>
