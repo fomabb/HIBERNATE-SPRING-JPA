@@ -1,9 +1,9 @@
 package org.iase24.com.entity;
 
-import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.Set;
 

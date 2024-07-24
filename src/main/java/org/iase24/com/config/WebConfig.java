@@ -1,5 +1,7 @@
 package org.iase24.com.config;
 
+import com.zaxxer.hikari.HikariConfig;
+import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -7,6 +9,8 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+
+import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = "org.iase24.com")
@@ -28,4 +32,10 @@ public class WebConfig implements WebMvcConfigurer {
         return mapping;
     }
 
+
+//    @Bean
+//    public DataSource getDataSource() {
+//        HikariConfig config = new HikariConfig("/application.properties");
+//        return new HikariDataSource(config);
+//    }
 }

@@ -1,9 +1,9 @@
 package org.iase24.com.entity;
 
-import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity
@@ -11,6 +11,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Slf4j
 public class Project {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
